@@ -13,3 +13,7 @@
 ## Como Rodar
 
 Com o ambiente virtual ativo digite `python main.py`
+
+## Duração
+
+- 1.44s
