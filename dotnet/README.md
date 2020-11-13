@@ -11,4 +11,4 @@ Não é necessário instalar nenhum pacote!
 Digite o comando `dotnet run`
 
 ## Duração
-- 729 milissegundo
+- 729 milissegundos
