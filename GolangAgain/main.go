@@ -18,7 +18,7 @@ type Digimon struct {
 }
 
 const (
-	works = 1
+	works = 10
 	file  = "digimon.txt"
 )
 
