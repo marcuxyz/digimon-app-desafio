@@ -1,5 +1,4 @@
-# *GoangAgain
+# digimon-app-desafio
 
-Execution
-
+Execution:
 go run main.go
