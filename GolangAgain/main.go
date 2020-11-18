@@ -50,8 +50,7 @@ func load(digimons chan string) {
 		go func() {
 			defer wg.Done()
 			for digimon := range digimons {
-
-				url := fmt.Sprintf(endpoint, digimon)
+                                url := fmt.Sprintf(endpoint, digimon)
 				fmt.Println(getDigimon(url))
 			}
 		}()
