@@ -11,16 +11,20 @@ const reader = readline.createInterface(input);
 const promises = [];
 
 reader.on('line', data => {
+    // 'transformResponse' suppresses axios' json parsing, which is unnecessary for this challenge
     const promise = axios.get(BASE_ADDRESS + data, { transformResponse: res => res })
-        .then(response => console.log(response.data));
+        .then(response => response.data);
 
     promises.push(promise);
 });
 
 reader.on('close', () => {
     Promise.all(promises)
-        .then(() => {
+        .then(results => {
             const end = process.hrtime(start);
-            console.log(`Script executed in ${end} seconds.`);
+            const ms = end[0] * 1000 + Math.round(end[1] / 1000000);
+
+            results.forEach(r => console.log(r));
+            console.log(`Script executed in ${ms} milliseconds.`);
         });
 });
